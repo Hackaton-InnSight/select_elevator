@@ -59,11 +59,14 @@
 
     <div class="list-container">
         <ul>
-            <li><a href="google.fr">2e étage : Restaurant</a></li>
+            <li><a href="">2e étage : Restaurant</a></li>
             <li>1e étage : Chambres</li>
             <li>Rez-de-chaussée : Accueil</li>
             <li>-1 : SPA & détente</li>
             <li>-2 : Parking</li>
+
+            https://play.workadventu.re/_/uoih0jdbjj/localhost:5173/elevator.tmj#entry-from-lobby
+            https://hackaton-innsight.github.io/select_elevator/google.fr
         </ul>
     </div>
 
@@ -74,6 +77,7 @@
                 link.addEventListener('click', function (e) {
                     e.preventDefault(); // Empêcher le comportement par défaut du lien
                     var url = this.getAttribute('href');
+                    console.log(window.top.location.href);
                     window.top.location.href = url; // Redirige la fenêtre principale
                 });
             });
