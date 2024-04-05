@@ -72,10 +72,10 @@
     <script>
         function setupNavigation() {
             document.getElementById('restaurant').addEventListener('click', function () {
-                WA.nav.goToRoom("map.tmj#entry-from-lobby");
+                WA.nav.goToPage('https://www.wikipedia.org/');
             });
             document.getElementById('chambres').addEventListener('click', function () {
-                WA.nav.goToRoom("map.tmj#entry-from-lobby");
+                WA.nav.goToRoom('./lobby.tmj');
             });
             document.getElementById('accueil').addEventListener('click', function () {
                 WA.nav.goToRoom("#my-entry-point");
