@@ -72,19 +72,19 @@
     <script>
         function setupNavigation() {
             document.getElementById('restaurant').addEventListener('click', function () {
-                WA.nav.goToRoom('../otherMap/mapRestaurant.json');
+                WA.nav.goToRoom("map.tmj#entry-from-lobby");
             });
             document.getElementById('chambres').addEventListener('click', function () {
-                WA.nav.goToRoom('../otherMap/mapChambres.json');
+                WA.nav.goToRoom("map.tmj#entry-from-lobby");
             });
             document.getElementById('accueil').addEventListener('click', function () {
-                WA.nav.goToRoom('../otherMap/mapChambres.json');
+                WA.nav.goToRoom("#my-entry-point");
             });
             document.getElementById('spa').addEventListener('click', function () {
-                WA.nav.goToRoom('../otherMap/mapChambres.json');
+                WA.nav.goToRoom("#my-entry-point");
             });
             document.getElementById('parking').addEventListener('click', function () {
-                WA.nav.goToRoom('../otherMap/mapChambres.json');
+                WA.nav.goToRoom("#my-entry-point");
             });
         }
 
