@@ -71,25 +71,33 @@
 
     <script src="https://play.staging.workadventu.re/iframe_api.js"></script>
     <script>
-        function setupNavigation() {
-            document.getElementById('restaurant').addEventListener('click', function () {
-                WA.nav.goToRoom('./restaurant.tmj');
-            });
-            document.getElementById('chambres').addEventListener('click', function () {
-                WA.nav.goToRoom('./rooms-map.tmj');
-            });
-            document.getElementById('accueil').addEventListener('click', function () {
-                WA.nav.goToRoom('./lobby.tmj');
-            });
-            document.getElementById('spa').addEventListener('click', function () {
-                WA.nav.goToRoom('./spa.tmj');
-            });
-            document.getElementById('parking').addEventListener('click', function () {
-                WA.nav.goToRoom('./parking.tmj');
-            });
-        }
+        WA.onInit().then(() => {
+            function setupNavigation() {
+                document.getElementById('restaurant').addEventListener('click', function () {
+                    WA.state.stopSound = true;
+                    WA.nav.goToRoom('./restaurant.tmj');
+                });
+                document.getElementById('chambres').addEventListener('click', function () {
+                    WA.nav.goToRoom('./rooms-map.tmj');
+                    WA.state.stopSound = true;
+                });
+                document.getElementById('accueil').addEventListener('click', function () {
+                    WA.nav.goToRoom('./lobby.tmj');
+                    WA.state.stopSound = true;
+                });
+                document.getElementById('spa').addEventListener('click', function () {
+                    WA.nav.goToRoom('./spa.tmj');
+                    WA.state.stopSound = true;
+                });
+                document.getElementById('parking').addEventListener('click', function () {
+                    WA.nav.goToRoom('./parking.tmj');
+                    WA.state.stopSound = true;
+                });
+            }
 
-        document.addEventListener('DOMContentLoaded', setupNavigation);
+            document.addEventListener('DOMContentLoaded', setupNavigation);
+        })
+
     </script>
 
 </body>
