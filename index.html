@@ -36,6 +36,7 @@
             margin-bottom: 10px;
             font-size: 16px;
             text-align: center;
+            cursor: pointer;
         }
 
         @media (max-width: 768px) {
@@ -72,19 +73,19 @@
     <script>
         function setupNavigation() {
             document.getElementById('restaurant').addEventListener('click', function () {
-                WA.nav.goToPage('./restaurant.tmj');
+                WA.nav.goToRoom('./restaurant.tmj');
             });
             document.getElementById('chambres').addEventListener('click', function () {
                 WA.nav.goToRoom('./rooms-map.tmj');
             });
             document.getElementById('accueil').addEventListener('click', function () {
-                WA.nav.goToPage('./lobby.tmj');
+                WA.nav.goToRoom('./lobby.tmj');
             });
             document.getElementById('spa').addEventListener('click', function () {
-                WA.nav.goToPage('./spa.tmj');
+                WA.nav.goToRoom('./spa.tmj');
             });
             document.getElementById('parking').addEventListener('click', function () {
-                WA.nav.goToPage('./parking.tmj');
+                WA.nav.goToRoom('./parking.tmj');
             });
         }
 
