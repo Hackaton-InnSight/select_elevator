@@ -76,7 +76,7 @@
                     e.preventDefault(); // Empêcher le comportement par défaut du lien
                     var url = this.getAttribute('href');
                     console.log(window.top.location);
-                    // window.top.location.href = url; // Redirige la fenêtre principale
+                    window.top.location.href = url; // Redirige la fenêtre principale
                 });
             });
         });
