@@ -59,27 +59,37 @@
 
     <div class="list-container">
         <ul>
-            <li><a href="google.fr">2e étage : Restaurant</a></li>
-            <li>1e étage : Chambres</li>
-            <li>Rez-de-chaussée : Accueil</li>
-            <li>-1 : SPA & détente</li>
-            <li>-2 : Parking</li>
-
+            <li id="restaurant">2e étage : Restaurant</li>
+            <li id="chambres">1e étage : Chambres</li>
+            <li id="accueil">Rez-de-chaussée : Accueil</li>
+            <li id="spa">-1 : SPA & détente</li>
+            <li id="parking">-2 : Parking</li>
         </ul>
     </div>
 
-    <script type="text/javascript">
-        document.addEventListener("DOMContentLoaded", function () {
-            var links = document.querySelectorAll('a');
-            links.forEach(function (link) {
-                link.addEventListener('click', function (e) {
-                    e.preventDefault(); // Empêcher le comportement par défaut du lien
-                    var url = this.getAttribute('href');
-                    console.log(window.top.location);
-                    window.top.location.href = url; // Redirige la fenêtre principale
-                });
+
+    <script src="http://play.staging.workadventu.re/iframe_api.js"></script>
+    <script>
+        function setupNavigation() {
+            document.getElementById('restaurant').addEventListener('click', function () {
+                WA.nav.goToRoom('../otherMap/mapRestaurant.json');
             });
-        });
+            document.getElementById('chambres').addEventListener('click', function () {
+                WA.nav.goToRoom('../otherMap/mapChambres.json');
+            });
+            document.getElementById('accueil').addEventListener('click', function () {
+                WA.nav.goToRoom('../otherMap/mapChambres.json');
+            });
+            document.getElementById('spa').addEventListener('click', function () {
+                WA.nav.goToRoom('../otherMap/mapChambres.json');
+            });
+            document.getElementById('parking').addEventListener('click', function () {
+                WA.nav.goToRoom('../otherMap/mapChambres.json');
+            });
+        }
+
+        // Assurez-vous que le DOM est entièrement chargé avant de configurer la navigation
+        document.addEventListener('DOMContentLoaded', setupNavigation);
     </script>
 
 </body>
